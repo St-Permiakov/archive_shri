@@ -1,0 +1,84 @@
+<section class="main-section section section--50 js-main-section">
+    <div class="section__header">
+        <h2 class="section__title">Главное</h2>
+    </div>
+    <div class="main-section__content section__content">
+        <picture class="main-section__bg">
+            <source srcset="img/bg@1x.png" media="(max-width: 767px)">
+            <source srcset="img/bg@2x.png" media="(min-width: 768px)">
+            <img src="img/bg@1x.png" alt="Фон">
+        </picture>
+        <div class="main-section__content-inner">
+            <div class="main-section__content-col main-section__content-col--left">
+                <div class="main-section__header">
+                    <h3 class="main-section__title">Привет, Геннадий!</h3>
+                    <div class="main-section__subtitle">Двери и окна закрыты, сигнализация включена.</div>
+                </div>
+                <div class="main-section__info">
+                    <div class="main-section__info-item">
+                        <div class="main-section__info-label">Дома</div>
+                        <div class="main-section__info-content">+23</div>
+                    </div>
+                    <div class="main-section__info-item">
+                        <div class="main-section__info-label">За окном</div>
+                        <div class="main-section__info-content">
+                            +19
+                            <img src="img/icons/icon_cloud.svg" alt="Дождь" class="main-section__info-icon" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="main-section__content-col main-section__content-col--right">
+                <div class="main-section__slider js-main-section-slider">
+                    <ul class="main-section__slider-inner js-main-section-slider-inner js-hide-scroll-y">
+                        <li class="main-section__slider-item js-main-section-slide">
+                            @@include('blocks/components/bubble/bubble.html', {
+                                "modificator": "big",
+                                "title": "Philips Cooler",
+                                "subtitle": "Начнет охлаждать в 16:30",
+                                "img1": "img/icons/icon_temperature.svg",
+                                "img2": "img/icons/icon_temperature_2.svg",
+                                "modes": 2,
+                                "mode": 1
+                            })
+                        </li>
+                        <li class="main-section__slider-item js-main-section-slide">
+                            @@include('blocks/components/bubble/bubble.html', {
+                                "modificator": "big",
+                                "title": "Xiaomi Yeelight LED Smart Bulb",
+                                "subtitle": "Включится в 17:00",
+                                "img1": "img/icons/icon_sun.svg",
+                                "img2": "img/icons/icon_sun_2.svg",
+                                "modes": 2,
+                                "mode": 1
+                            })
+                        </li>
+                        <li class="main-section__slider-item js-main-section-slide">
+                            @@include('blocks/components/bubble/bubble.html', {
+                                "modificator": "big",
+                                "title": "Elgato Eve Degree Connected",
+                                "subtitle": "Выключено до 17:00",
+                                "img1": "img/icons/icon_temperature.svg",
+                                "img2": "img/icons/icon_temperature_2.svg",
+                                "modes": 2,
+                                "mode": 1
+                            })
+                        </li>
+                        <li class="main-section__slider-item js-main-section-slide">
+                            @@include('blocks/components/bubble/bubble.html', {
+                                "modificator": "big",
+                                "title": "LIFX Mini Day & Dusk A60 E27",
+                                "subtitle": "Включится в 17:00",
+                                "img1": "img/icons/icon_sun.svg",
+                                "img2": "img/icons/icon_sun_2.svg",
+                                "modes": 2,
+                                "mode": 1
+                            })
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

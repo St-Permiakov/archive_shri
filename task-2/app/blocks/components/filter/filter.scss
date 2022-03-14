@@ -1,0 +1,79 @@
+.filter {
+    position: relative;
+
+    @include media-breakpoint-down(sm) {
+        height: 31px;
+    }
+
+    &__item {
+        @include media-breakpoint-down(sm) {
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            transition: opacity 250ms, top 250ms;
+
+            &:not(.active) {
+                z-index: 0;
+                opacity: 0;
+            }
+
+            &.active .button {
+                padding-right: 30px;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    top: calc(50% - 5px);
+                    right: 15px;
+                    width: 7px;
+                    height: 7px;
+                    border-bottom: 1px solid color('black');
+                    border-right: 1px solid color('black');
+                    transform: rotate(45deg);
+                    transition: transform 250ms;
+                }
+            }
+        }
+
+    }
+
+    &.active {
+        @include media-breakpoint-down(sm) {
+            &::before {
+                content: '';
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,0.5);
+            }
+
+            .filter__item {
+                z-index: 0;
+                position: absolute;
+                top: 0;
+                opacity: 0;
+                border-radius: 20px;
+                transition: opacity 300ms, top 300ms;
+
+                &.active .button {
+                    &::after {
+                        transform: rotate(225deg) translate3d(-2px, -2px, 0);
+                    }
+                }
+
+                @for $i from 1 through 15 {
+                    &:nth-child(#{$i}) {
+                        top: calc(120% * (#{$i} - 1));
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

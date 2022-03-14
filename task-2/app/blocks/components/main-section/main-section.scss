@@ -1,0 +1,176 @@
+.main-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &__bg {
+        img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+
+            @include media-breakpoint-down(sm) {
+                height: 280px;
+            }
+        }
+    }
+
+    &__content-inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+
+        @include media-breakpoint-down(sm) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__content-col {
+        &--left {
+            padding: 25px 0 25px 25px;
+
+            @include media-breakpoint-down(sm) {
+                padding: 20px 20px 0;
+            }
+        }
+
+        &--right {
+            width: 200px;
+            margin: 0 20px 0 0;
+
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+                margin: 0;
+            }
+        }
+    }
+
+    &__header {
+        margin: 0 0 25px;
+    }
+
+    &__title {
+        margin: 0 0 5px;
+        font-size: 27px;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 18px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 14px;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 12px;
+        }
+    }
+
+    &__info {
+        display: flex;
+    }
+
+    &__info-item {
+        position: relative;
+        margin: 0 15px 0 0;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    &__info-label {
+        margin: 0 0 5px;
+        font-size: 14px;
+        color: color('gray');
+
+        @include media-breakpoint-down(sm) {
+            font-size: 12px;
+        }
+    }
+
+    &__info-content {
+        white-space: nowrap;
+        font-size: 36px;
+        font-weight: 600;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 24px;
+        }
+    }
+
+    &__info-icon {
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+
+        @include media-breakpoint-down(sm) {
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    &__slider {
+        height: 100%;
+        overflow: hidden;
+    }
+
+    &__slider-inner {
+        list-style: none;
+        height: 100%;
+        margin: 0;
+        padding: 20px 0 25px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+            padding: 15px 20px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+    }
+
+    &__slider-item {
+        position: relative;
+        margin: 0 0 15px;
+
+        @include media-breakpoint-down(sm) {
+            display: inline-block;
+            margin: 0 20px 0 0;
+        }
+
+        &:last-child {
+            margin: 0;
+        }
+
+        .bubble__inner {
+            transition: opacity 250ms;
+        }
+
+        &.partially-hidden {
+            &::after {
+                content: '';
+                position: absolute;
+                top: 10px;
+                left: calc(50% - 8px);
+                width: 16px;
+                height: 16px;
+                background-image: url(../img/icons/icon-arrow-double.svg);
+                background-position: center;
+                background-size: 100%;
+                background-repeat: no-repeat;
+            }
+
+            .bubble__inner {
+                opacity: 0;
+            }
+        }
+    }
+}

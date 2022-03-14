@@ -1,0 +1,66 @@
+.scenarios {
+
+    &__slider-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        max-height: calc(120px * 3);
+        margin: 0 0 -20px;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+
+        @include media-breakpoint-down(sm) {
+            display: block;
+            margin: 0 -20px;
+            padding: 0 20px;
+            overflow-y: hidden;
+            overflow-x: scroll;
+            -webkit-overflow-scrolling: touch;
+            white-space: nowrap;
+        }
+    }
+
+    &__slider-item {
+        display: inline-block;
+        white-space: normal;
+        transition: transform 300ms, opacity 300ms;
+
+        &.in {
+            @include media-breakpoint-up(sm) {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+        }
+
+        &.out {
+            @include media-breakpoint-up(sm) {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+        }
+
+        &.disabled {
+            @include media-breakpoint-up(sm) {
+                display: none;
+            }
+        }
+
+        .bubble {
+            width: 100%;
+            margin: 0 20px 0 0;
+
+            @include media-breakpoint-down(sm) {
+                width: 200px;
+                margin: 0 15px 0 0;
+                flex-shrink: 0;
+
+                &:last-child {
+                    margin: 0 20px 0 0;
+                }
+            }
+        }
+    }
+}

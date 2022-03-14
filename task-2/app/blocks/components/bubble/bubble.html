@@ -1,0 +1,13 @@
+<button @@if(context.id){id="@@id"} class="bubble @@if(context.modificator){bubble--@@modificator} @@if(context.class){@@class} js-bubble mode-@@mode" data-mode="@@mode" data-modes="@@modes">
+    <span class="bubble__inner">
+        <span class="bubble__icon">
+            <img src="@@img1" alt="icon" class="bubble__icon-img" />
+            @@if(context.img2){<img src="@@img2" alt="icon" class="bubble__icon-img" />}
+            @@if(context.img3){<img src="@@img3" alt="icon" class="bubble__icon-img" />}
+        </span>
+        <span class="bubble__content">
+            <span class="bubble__title">@@title</span>
+            @@if(context.subtitle){<span class="bubble__subtitle js-status">@@subtitle</span>}
+        </span>
+    </span>
+</button>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ШРИ 2018/2 - Задание 4, Сервер</title>
+</head>
+<body>
+    <h1>Вас приветствует Express сервер!</h1>
+
+    <p><button class="js-status-request">Получить статус</button></p>
+    <p class="js-status-response"></p>
+    <hr />
+    <label>Введите TYPE запроса через запятую <input type="text" class="js-events-types" placeholder='"info" или "info, critical"'> и нажмите "Получить события"</label>
+    <p><button class="js-events-request">Получить события</button></p>
+    <p>Или просто нажмите на ссылку <a href="/api/events?type=info:critical">Получить все события</a></p>
+    <p class="js-events-response"></p>
+    <hr />
+    <p><a href="/no_such_page">Неверная ссылка</a></p>
+
+    <script>
+
+        function getEvents() {
+            function reqListener () {
+                document.querySelector('.js-events-response').innerHTML = '<p><strong>Результат также выведен в консоль браузера</strong></p><p>' + this.responseText + '</p>';
+                console.log(JSON.parse(this.responseText));
+            }
+
+            var types = document.querySelector('.js-events-types').value.trim().replace(/\s*/gi, '').split(',');
+
+            var req = new XMLHttpRequest();
+            req.onload = reqListener;
+            req.open('get', '/api/events?type=' + types.join(':'), true);
+            req.send();
+        }
+
+        document.querySelector('.js-status-request').addEventListener('click', function (e) {
+            function reqListener () {
+                document.querySelector('.js-status-response').innerHTML = this.responseText;
+            }
+
+            var req = new XMLHttpRequest();
+            req.onload = reqListener;
+            req.open('get', '/status', true);
+            req.send();
+        });
+
+        document.querySelector('.js-events-request').addEventListener('click', function (e) {
+            getEvents();
+        });
+
+        document.querySelector('.js-events-types').addEventListener('keyup', function (e) {
+            if (e.code === 'Enter' || e.key === 'Enter' || e.which === 13) getEvents();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<div class="popup js-popup" data-trigger-id="@@triggerId">
+    <div class="popup__btn-wrapper">
+        <button class="popup__btn popup__btn--apply js-popup-apply">Применить</button>
+        <button class="popup__btn popup__btn--cancel js-popup-cancel">Закрыть</button>
+    </div>
+    <div class="popup__inner">
+        <div class="popup__header">
+            <h3 class="popup__title">@@title</h3>
+            <div class="popup__subtitle js-status">
+                <!-- Заполняется JS -->
+            </div>
+        </div>
+        <div class="popup__icon">
+            @@if(context.popupIconText){<span class="popup__icon-text js-control-value">@@popupIconText</span>}
+            <div class="popup__icon-img-set">
+                <img src="@@popupIcon1" alt="" class="popup__icon-img">
+                @@if(context.popupIcon2){<img src="@@popupIcon2" alt="" class="popup__icon-img">}
+            </div>
+        </div>
+        <div class="popup__content">
+            @@include('@@popupContentUrl')
+        </div>
+    </div>
+</div>

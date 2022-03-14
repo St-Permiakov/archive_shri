@@ -1,0 +1,31 @@
+/* helpers */
+@import "helpers/mixins-media";
+@import "helpers/helpers";
+
+/* core */
+@import "core/colors";
+@import "core/grid";
+@import "core/fonts";
+@import "core/layout";
+@import "core/base";
+
+/* vendors and libs */
+@import "../../../node_modules/nouislider/distribute/nouislider";
+@import "vendors/roundslider.min";
+
+/* elements */
+@import '../../blocks/elements/button/button';
+
+/* layout */
+@import "../../blocks/layout/header/header";
+@import "../../blocks/layout/footer/footer";
+
+/* components */
+@import "../../blocks/components/bubble/bubble";
+@import "../../blocks/components/section/section";
+@import "../../blocks/components/main-section/main-section";
+@import "../../blocks/components/devices/devices";
+@import "../../blocks/components/scenarios/scenarios";
+@import "../../blocks/components/btn-row/btn-row";
+@import "../../blocks/components/popup/popup";
+@import "../../blocks/components/filter/filter";

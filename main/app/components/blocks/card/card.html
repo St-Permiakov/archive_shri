@@ -1,0 +1,53 @@
+<div class="card@@if(context.size){ card--@@size}@@if(type === 'critical'){ card--crit}">
+    <div class="card__header">
+        <div class="card__icon">
+            @@include('./app/assets/images/icons/icon-@@icon.svg')
+        </div>
+        <h2 class="card__title">@@title</h2>
+    </div>
+    <div class="card__meta">
+        <div class="card__meta-item">@@source</div>
+        <div class="card__meta-item">@@time</div>
+    </div>
+    @@if(context.description){
+    <div class="card__content">
+        <div class="card__content-item card__desc">@@description</div>
+        @@if(context.data) {
+        <div class="card__content-item card__widget">
+            @@if(context.data.type === "graph"){<img class="card__img" src="assets/img/Richdata.svg" alt="График">}
+            @@if(context.data.image){
+            @@include('./app/components/blocks/camera/camera.html')
+            }
+            @@if(context.data.temperature){
+            <div class="card__widget-data">
+                <span class="card__widget-data-name">Температура: </span>
+                <span class="card__widget-data-val">@@data.temperature С</span></div>
+            <div class="card__widget-data">
+                <span class="card__widget-data-name">Влажность: </span>
+                <span class="card__widget-data-val">@@data.humidity%</span></div>
+            }
+            @@if(context.data.buttons){
+                <div class="card__widget-btns">
+                    @@include('./app/components/elements/btn/btn.html', {"class": "card__btn", "text": "Да", "mod": "primary"})
+                    @@include('./app/components/elements/btn/btn.html', {"class": "card__btn", "text": "Нет"})
+                </div>
+            }
+            @@if(context.data.albumcover){
+            @@include('./app/components/blocks/pleer/pleer.html', {
+                "albumcover": "@@data.albumcover",
+                "artist": "@@data.artist",
+                "name": "@@data.track.name",
+                "length": "@@data.track.length",
+                "volume": "@@data.volume"
+            })
+            }
+        </div>
+        }
+    </div>
+    }
+
+    <div class="card__controls">
+        <button class="card__control card__control--close"></button>
+        <button class="card__control card__control--more"></button>
+    </div>
+</div>

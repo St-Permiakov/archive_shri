@@ -1,0 +1,26 @@
+// Colors
+$base-colors: (
+    'true-black':   #000,
+    'black':        #333,
+    'white':        #FFFFFF,
+
+    'yellow':       #FFD93E,
+    'yellow2':      #FFCD00,
+    'gray':         #858585,
+    'gray2':        #F7F7F7,
+    'gray3':        #F0F0F0
+
+);
+
+$brand-colors: (
+    'primary': map-get($base-colors, 'yellow'),
+    'primary-hover': map-get($base-colors, 'yellow2'),
+    'border': map-get($base-colors, 'gray3'),
+    'bg':map-get($base-colors, 'gray2')
+);
+
+$colors: map-merge($base-colors, $brand-colors);
+
+@function color($color) {
+    @return map-get($colors, $color);
+}

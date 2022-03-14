@@ -1,0 +1,34 @@
+<div class="pleer js-pleer">
+    <div class="pleer__header">
+        <div class="pleer__icon">
+            <img class="js-pleer-icon" src="@@albumcover" alt="">
+        </div>
+        <div class="pleer__track">
+            <div class="pleer__track-name js-pleer-name">@@artist - @@name</div>
+            <div class="pleer__track-slider js-pleer-track">
+                <div class="pleer__track-slider-line js-pleer-track-line">
+                    <div class="pleer__track-slider-control js-pleer-track-control"></div>
+                </div>
+                <div class="pleer__track-time js-pleer-track-time">@@length</div>
+            </div>
+        </div>
+    </div>
+    <div class="pleer__footer">
+        <div class="pleer__btns">
+            <button class="pleer__btn pleer__btn--prev">
+                @@include('./app/assets/images/icons/icon-music-btn.svg')
+            </button>
+            <button class="pleer__btn pleer__btn--next">
+                @@include('./app/assets/images/icons/icon-music-btn.svg')
+            </button>
+        </div>
+        <div class="pleer__volume">
+            <div class="pleer__volume-slider js-pleer-volume">
+                <div class="pleer__volume-slider-line js-pleer-volume-line">
+                    <div class="pleer__volume-slider-control js-pleer-volume-control"></div>
+                </div>
+                <div class="pleer__volume-val js-pleer-volume-val">@@volume%</div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="popup__light">
+    <div class="popup__btn-row btn-row js-popup-presets">
+        <div class="btn-row__inner">
+            <ul class="btn-row__list js-hide-scroll-x">
+                <li class="btn-row__item">
+                    @@include('blocks/elements/button/button.html', {"text": "Вручную", "type": "manual", "class": "js-popup-preset active"})
+                </li>
+                <li class="btn-row__item">
+                    @@include('blocks/elements/button/button.html', {"text": "Дневной свет", "type": "50", "class": "js-popup-preset"})
+                </li>
+                <li class="btn-row__item">
+                    @@include('blocks/elements/button/button.html', {"text": "Вечерний свет", "type": "75", "class": "js-popup-preset"})
+                </li>
+                <li class="btn-row__item">
+                    @@include('blocks/elements/button/button.html', {"text": "Рассвет", "type": "30", "class": "js-popup-preset"})
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="popup__control-wrapper">
+        <div class="popup__control popup__control--axis popup__control--light js-control" data-type="axis"></div>
+        <div class="popup__control-icon popup__control-icon--min"> <img src="img/icons/icon_sun_3.svg" alt="icon" /> </div>
+        <div class="popup__control-icon popup__control-icon--max"> <img src="img/icons/icon_sun_3.svg" alt="icon" /> </div>
+    </div>
+</div>

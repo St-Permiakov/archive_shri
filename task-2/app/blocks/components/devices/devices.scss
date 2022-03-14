@@ -1,0 +1,47 @@
+.devices {
+    &__header {
+        z-index: 2;
+        position: relative;
+        margin: 0 0 15px;
+    }
+
+    &__header-inner {
+        display: flex;
+        align-items: center;
+
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+
+    &__title {
+        margin: 0 15px 0 0;
+    }
+
+    &__slider {
+        margin: 0 -40px;
+        overflow: hidden;
+    }
+
+    &__slider-inner {
+        display: flex;
+        margin: 0;
+        padding: 5px 40px;
+        list-style: none;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        white-space: nowrap;
+        font-size: 0;
+    }
+
+    &__slider-item {
+        display: flex;
+        padding: 0 15px 0 0;
+        white-space: normal;
+
+        &:last-child {
+            padding: 0 40px 0 0;
+        }
+    }
+}

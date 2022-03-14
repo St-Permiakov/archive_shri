@@ -1,0 +1,34 @@
+@@include('blocks/layout/header/header.html', {"title": "Яндекс.Дом"})
+
+<main class="main js-main">
+    @@include('blocks/components/main-section/main-section.html')
+    @@include('blocks/components/scenarios/scenarios.html')
+    @@include('blocks/components/devices/devices.html')
+</main>
+
+@@include('blocks/layout/footer/footer.html')
+
+@@include('blocks/components/popup/popup.html', {
+    "triggerId": "popup-heat",
+    "title": "Elgato Eve Degree Connected",
+    "popupIconText": "+23",
+    "popupIcon1": "img/icons/icon_temperature.svg",
+    "popupIcon2": "img/icons/icon_temperature_2.svg",
+    "popupContentUrl": "blocks/components/popup/popup-heat.html"
+})
+@@include('blocks/components/popup/popup.html', {
+    "triggerId": "popup-light",
+    "title": "Xiaomi Yeelight LED Smart Bulb",
+    "popupIconText": "",
+    "popupIcon1": "img/icons/icon_sun.svg",
+    "popupIcon2": "img/icons/icon_sun_2.svg",
+    "popupContentUrl": "blocks/components/popup/popup-light.html"
+})
+@@include('blocks/components/popup/popup.html', {
+    "triggerId": "popup-round",
+    "title": "Xiaomi Warm Floor",
+    "popupIconText": "+23",
+    "popupIcon1": "img/icons/icon_temperature.svg",
+    "popupIcon2": "img/icons/icon_temperature_2.svg",
+    "popupContentUrl": "blocks/components/popup/popup-round.html"
+})

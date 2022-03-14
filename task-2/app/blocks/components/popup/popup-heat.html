@@ -1,0 +1,26 @@
+<div class="popup__heat js-popup-axis">
+    <div class="popup__btn-row btn-row js-popup-presets">
+        <div class="btn-row__inner">
+            <ul class="btn-row__list js-hide-scroll-x">
+                <li class="btn-row__item">
+                    @@include('blocks/elements/button/button.html', {"text": "Вручную", "type": "manual", "class": "js-popup-preset active"})
+                </li>
+                <li class="btn-row__item">
+                    @@include('blocks/elements/button/button.html', {"text": "Холодно", "type": "0", "class": "js-popup-preset"})
+                </li>
+                <li class="btn-row__item">
+                    @@include('blocks/elements/button/button.html', {"text": "Тепло", "type": "23", "class": "js-popup-preset"})
+                </li>
+                <li class="btn-row__item">
+                    @@include('blocks/elements/button/button.html', {"text": "Жарко", "type": "30", "class": "js-popup-preset"})
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="popup__control-wrapper">
+        <div class="popup__control popup__control--axis popup__control--heat js-control" data-type="axis" data-min="-10" data-max="30" data-prefix="temp"></div>
+        <div class="popup__control-icon popup__control-icon--min">-10</div>
+        <div class="popup__control-icon popup__control-icon--max">+30</div>
+    </div>
+</div>

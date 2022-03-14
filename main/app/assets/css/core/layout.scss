@@ -1,0 +1,50 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    transition: filter 300ms;
+
+    &.blured {
+        pointer-events: none;
+        filter: blur(3px) brightness(0.4);
+        user-select: none;
+    }
+}
+
+.main {
+    flex-grow: 1;
+    width: 100%;
+    padding: 30px 170px 80px;
+
+    @include media-breakpoint-down(lg) {
+        padding: 30px 100px 80px;
+    }
+
+    @include media-breakpoint-down(md) {
+        padding: 30px 40px 80px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding: 30px 20px 80px;
+    }
+
+    &__title {
+        margin: 0 0 30px;
+        font-size: px2rem(36px);
+    }
+
+    .full-screen & {
+        z-index: 30;
+    }
+}
+
+.wrapper {
+    padding: 0 40px;
+
+    @include media-breakpoint-down(sm) {
+        padding: 0 20px;
+    }
+}

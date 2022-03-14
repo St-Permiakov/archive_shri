@@ -1,0 +1,116 @@
+<section class="devices section js-section js-devices">
+    <div class="devices__header section__header">
+        <div class="devices__header-inner">
+            <h2 class="devices__title section__title">Избранные устройства</h2>
+            <div class="devices__header-filter">
+                @@include('blocks/components/filter/filter.html')
+            </div>
+        </div>
+
+        <div class="section__arrows">
+            <button class="section__arrow section__arrow--left  js-section-slider-left  disabled"><img src="img/icons/icon_arrow_left.svg" alt="Стрелка влево" class="section__arrows-icon" /></button>
+            <button class="section__arrow section__arrow--right js-section-slider-right disabled"><img src="img/icons/icon_arrow_left.svg" alt="Стрелка вправо" class="section__arrows-icon" /></button>
+        </div>
+    </div>
+    <div class="devices__content section__content">
+        <div class="devices__slider js-section-slider">
+            <ul class="devices__slider-inner js-section-slider-inner js-hide-scroll-x">
+                <li class="devices__slider-item js-filtered-item js-section-slider-item" data-type="all filter3">
+                    @@include('blocks/components/bubble/bubble.html', {
+                        "id": "popup-light",
+                        "class": "js-popup-trigger",
+                        "title": "Xiaomi Yeelight LED Smart Bulb",
+                        "subtitle": "Включено",
+                        "modificator": "big",
+                        "img1": "img/icons/icon_sun.svg",
+                        "img2": "img/icons/icon_sun_2.svg",
+                        "modes": 2,
+                        "mode": 2
+                    })
+                </li>
+                <li class="devices__slider-item js-filtered-item js-section-slider-item" data-type="all filter1">
+                    @@include('blocks/components/bubble/bubble.html', {
+                        "id": "popup-heat",
+                        "class": "js-popup-trigger",
+                        "title": "Elgato Eve Degree Connected",
+                        "subtitle": "Выключено до 17:00",
+                        "modificator": "big",
+                        "img1": "img/icons/icon_temperature.svg",
+                        "img2": "img/icons/icon_temperature_2.svg",
+                        "modes": 2,
+                        "mode": 1
+                    })
+                </li>
+                <li class="devices__slider-item js-filtered-item js-section-slider-item" data-type="all filter3">
+                    @@include('blocks/components/bubble/bubble.html', {
+                        "id": "popup-round",
+                        "class": "js-popup-trigger",
+                        "title": "Xiaomi Warm Floor",
+                        "subtitle": "Включено",
+                        "modificator": "big",
+                        "img1": "img/icons/icon_temperature.svg",
+                        "img2": "img/icons/icon_temperature_2.svg",
+                        "modes": 2,
+                        "mode": 2
+                    })
+                </li>
+                <li class="devices__slider-item js-filtered-item js-section-slider-item" data-type="all filter4">
+                    @@include('blocks/components/bubble/bubble.html', {
+                        "title": "D-Link Omna 180 Cam",
+                        "subtitle": "Включится в 17:00",
+                        "modificator": "big",
+                        "img1": "img/icons/icon_sun.svg",
+                        "img2": "img/icons/icon_sun_2.svg",
+                        "modes": 2,
+                        "mode": 1
+                    })
+                </li>
+                <li class="devices__slider-item js-filtered-item js-section-slider-item" data-type="all filter3 filter2">
+                    @@include('blocks/components/bubble/bubble.html', {
+                        "title": "LIFX Mini Day & Dusk A60 E27",
+                        "subtitle": "Включится в 17:00",
+                        "modificator": "big",
+                        "img1": "img/icons/icon_sun.svg",
+                        "img2": "img/icons/icon_sun_2.svg",
+                        "modes": 2,
+                        "mode": 1
+                    })
+                </li>
+                <li class="devices__slider-item js-filtered-item js-section-slider-item" data-type="all filter2">
+                    @@include('blocks/components/bubble/bubble.html', {
+                        "title": "Xiaomi Mi Air Purifier 2S",
+                        "subtitle": "Включено",
+                        "modificator": "big",
+                        "img1": "img/icons/icon_sun.svg",
+                        "img2": "img/icons/icon_sun_2.svg",
+                        "modes": 2,
+                        "mode": 2
+                    })
+                </li>
+                <li class="devices__slider-item js-filtered-item js-section-slider-item" data-type="all filter1">
+                    @@include('blocks/components/bubble/bubble.html', {
+                        "title": "Philips Zhirui",
+                        "subtitle": "Выключено",
+                        "modificator": "big",
+                        "img1": "img/icons/icon_sun.svg",
+                        "img2": "img/icons/icon_sun_2.svg",
+                        "modes": 2,
+                        "mode": 1
+                    })
+                </li>
+                <li class="devices__slider-item js-filtered-item js-section-slider-item" data-type="all filter3">
+                    @@include('blocks/components/bubble/bubble.html', {
+                        "title": "Xiaomi Yeelight LED Smart Bulb",
+                        "subtitle": "Включено",
+                        "modificator": "big",
+                        "img1": "img/icons/icon_sun.svg",
+                        "img2": "img/icons/icon_sun_2.svg",
+                        "modes": 2,
+                        "mode": 1
+                    })
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</section>

@@ -1,0 +1,41 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.18.13",
+    "bs-html-injector": "^3.0.3",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-error-handle": "^1.0.0",
+    "gulp-file-include": "^1.2.0",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^4.3.11",
+    "npm-auto-install-webpack-plugin": "^0.2.0",
+    "run-sequence": "^2.1.0",
+    "webpack": "^4.14.0",
+    "webpack-stream": "^4.0.3"
+  },
+  "scripts": {
+    "start": "set NODE_ENV=serv&&gulp sync",
+    "build": "set NODE_ENV=production&&gulp build"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "nouislider": "^11.1.0"
+  }
+}

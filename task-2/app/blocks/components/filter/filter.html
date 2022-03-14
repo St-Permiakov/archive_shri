@@ -1,0 +1,21 @@
+<div class="btn-row filter js-filter">
+    <div class="btn-row__inner filter__inner">
+        <ul class="btn-row__list filter__list js-hide-scroll-x">
+            <li class="btn-row__item filter__item js-filter-item active">
+                @@include('blocks/elements/button/button.html', {"text": "Все", "type": "all", "class": "js-filter-item-button active"})
+            </li>
+            <li class="btn-row__item filter__item js-filter-item">
+                @@include('blocks/elements/button/button.html', {"text": "Кухня", "type": "filter1", "class": "js-filter-item-button"})
+            </li>
+            <li class="btn-row__item filter__item js-filter-item">
+                @@include('blocks/elements/button/button.html', {"text": "Зал", "type": "filter2", "class": "js-filter-item-button"})
+            </li>
+            <li class="btn-row__item filter__item js-filter-item">
+                @@include('blocks/elements/button/button.html', {"text": "Лампочки", "type": "filter3", "class": "js-filter-item-button"})
+            </li>
+            <li class="btn-row__item filter__item js-filter-item">
+                @@include('blocks/elements/button/button.html', {"text": "Камеры", "type": "filter4", "class": "js-filter-item-button"})
+            </li>
+        </ul>
+    </div>
+</div>

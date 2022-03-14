@@ -1,0 +1,21 @@
+{
+  "name": "shri-msk-2018-task-3",
+  "version": "1.0.0",
+  "main": "sheduler.js",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/St-Permiakov/shri-msk-2018-task-3.git"
+  },
+  "author": "Stanislav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/St-Permiakov/shri-msk-2018-task-3/issues"
+  }
+}
